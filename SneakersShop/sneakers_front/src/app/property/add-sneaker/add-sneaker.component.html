@@ -1,0 +1,100 @@
+<div class="row mb-5">
+    <div class="col-8">
+        <div class= "card">
+            <div class= "card-header">
+            <h1>List Your Sneakers</h1>
+            </div>
+            <div class= "card-body">
+                <form [formGroup]="listingForm" (ngSubmit)="onSub()">
+                    <div>
+                        <tabset #staticTabs>
+                        <tab heading="Display Info" id="tab1">
+                            <br  />
+                            <div class ="form-group col-12">
+                                <label for="name">Name</label>
+                                <input [(ngModel)]="productView.Name" type="text" class="form-control" formControlName="snkName">
+                                <span class="error-msg" *ngIf="!snkName!.valid && snkName!.touched">Please provide the sneaker name</span>
+                            </div>
+                
+                            <br  />
+                            <div class ="form-group col-12">
+                                <label for="type">Color</label>
+                                <input [(ngModel)]="productView.Type" type="text" class="form-control" formControlName="snkColor" rainbowField>
+                                <span class="error-msg" *ngIf="!snkColor!.valid && snkColor!.touched">Please provide the sneaker color</span>
+                            </div>
+                
+                            <br  />
+                            <div class ="form-group col-12">
+                                <label for="price">Price</label>
+                                <input [(ngModel)]="productView.Price" type="text" class="form-control" formControlName="snkPrice">
+                                <span class="error-msg" *ngIf="!snkPrice!.valid && snkPrice!.touched">Please provide the sneaker price</span>
+                            </div>
+                
+                            <br />
+                            <div class ="form-group col-12">
+                                <button [disabled]="!snkName.valid || !snkColor.valid || !snkPrice.valid" 
+                                (click)="selectTab(1)" type="button" class="btn btn-dark">Next </button>
+                                <button (click)="selectTab(0)" type="button" class="btn btn-dark" style="margin-left:2%;">Back </button>
+                            </div>
+                        </tab>
+                        
+                        <tab heading="Details" [disabled]="!snkName.valid || !snkColor.valid || !snkPrice.valid">
+                            <br  />
+                            <div class ="form-group col-12">
+                                <label for="brand">Brand</label>
+                                <input type="text" class="form-control" formControlName="snkBrand">
+                                <span class="error-msg" *ngIf="!snkBrand!.valid && snkBrand!.touched">Please provide the brand's name</span>
+                            </div>
+                            <br  />
+                            <div class ="form-group col-12">
+                                <label for="model">Model</label>
+                                <input type="text" class="form-control" formControlName="snkModel">
+                                <span class="error-msg" *ngIf="!snkModel!.valid && snkModel!.touched">Please provide the name of the model</span>
+                            </div>
+                            <br  />
+                            <div class="col-xs-12 col-12 col-md-4 form-group mb-3">
+                                <label for="date">Release date</label>
+                                <input type="text"
+                                    placeholder="Datepicker"
+                                    class="form-control"
+                                    bsDatepicker
+                                    [bsConfig]="{ isAnimated: true,
+                                    containerClass: 'theme-red', dateInputFormat: 'YYYY-MM-DD'}" formControlName="snkDate">
+                                <span class="error-msg" *ngIf="!snkDate!.valid && snkDate!.touched">Please provide the model release date</span>
+                            </div>
+                            <br  />
+                            <div class ="form-group col-12">
+                                <label for="blink">BuyLink</label>
+                                <input type="url" class="form-control" formControlName="snkBuyLink">
+                                <span class="error-msg" *ngIf="!snkBuyLink!.valid && snkBuyLink!.touched">Please enter a valid link to official store</span>
+                            </div>
+                            <br  />
+                            <div class ="form-group col-12">
+                                <div class="photo-control">
+                                    <input type="file" class="file-upload" (change)="selectFile($event)">
+                                    <p> Please, select a file from the 'assets' folder</p>
+                                </div>
+                            </div>
+                            <br  />
+                            <div class ="form-group col-12">
+                                <button (click)="selectTab(0)" type="button" class="btn btn-dark">Back </button>
+                                <button [disabled]="!listingForm.valid" type="submit" class="btn btn-dark" style="margin-left:2%;">Save </button>
+                                <button type="reset" class="btn btn-dark" style="margin-left:2%;">Reset</button>
+                            </div>
+                        </tab>
+                        </tabset>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="card-header">
+            <h2>Card List Preview</h2>
+        </div> 
+        <div class="card-body">
+            <!-- Ne folosim de o metoda de comunicare intre componente: property si hidebtn fac parte din p-card -->
+            <app-property-card [property]="productView" [hideBtn]="true"></app-property-card>
+        </div>
+    </div>
+</div>

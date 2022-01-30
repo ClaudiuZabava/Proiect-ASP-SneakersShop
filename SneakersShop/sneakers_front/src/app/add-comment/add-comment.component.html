@@ -1,0 +1,30 @@
+<div class="row mb-5">
+    <div class="col-8">
+        <div class= "card">
+            <div class= "card-header">
+            <h1>Add Your Reply</h1>
+            </div>
+            <div class= "card-body">
+                <form [formGroup]="commentForm" (ngSubmit)="onSubComm()">
+                    <div class ="form-group col-12">
+                        <label for="commInp">What's in your mind?</label>
+                        <textarea type="text" class="form-control" formControlName="commInp"></textarea>
+                        <span class="error-msg" *ngIf="!commInp!.valid && commInp!.touched">
+                            <span *ngIf="commInp.errors!['required']">
+                                Please provide a password
+                            </span>
+                            <span *ngIf="commInp.errors!['minlength']">
+                                Your comment need to be at least 10 characters long.
+                            </span>
+                        </span>
+                    </div>
+                
+                    <br  />
+                    <div class ="form-group col-12">
+                        <button [disabled]="!commentForm.valid" type="submit" class="btn btn-dark" style="margin-left:2%;">Post </button>
+                        <button type="reset" class="btn btn-dark" style="margin-left:2%;">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>

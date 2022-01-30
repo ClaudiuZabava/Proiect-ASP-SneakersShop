@@ -1,0 +1,67 @@
+[
+    {
+      "Id":1,
+      "Name":"Nike Air Force 1",
+      "Type":"White",
+      "Price":"$690",
+      "Image": "nik1.png",
+      "Brand":"Nike",
+        "Model": "Air Force 1 (LOW)",
+        "Date": "2020-03-10",
+        "BuyLink": "https://stockx.com/nike-air-force-1-low-white-07"
+    },
+    {
+      "Id":2,
+      "Name":"Nike Air Structure OG",
+      "Type":"Neon Teal",
+      "Price":"$490",
+      "Image": "nik6.png",
+      "Brand":"Nike",
+        "Model": "Garcia",
+        "Date": "2020-10-12",
+        "BuyLink": "https://stockx.com/nike-manoa-haystack"
+    },
+    {
+      "Id":3,
+      "Name":"Nike Air Tailwind",
+      "Type":"Storm Gray",
+      "Price":"$190",
+      "Image": "adidasn2.png",
+      "Brand":"Nike",
+        "Model": "Garcia",
+        "Date": "2020-10-08",
+        "BuyLink": "https://stockx.com/nike-manoa-haystack" 
+    },
+    {
+      "Id":4,
+      "Name":"Nike Manoa",
+      "Type":"Mustard",
+      "Price":"$390",
+      "Image": "nik2.png",
+      "Brand":"Nike",
+        "Model": "Garcia",
+        "Date": "2020-11-17",
+        "BuyLink": "https://stockx.com/nike-manoa-haystack"
+    },
+    {
+        "Id":5,
+        "Name":"Nike xyz",
+        "Type":"Mustard",
+        "Price":"$490",
+        "Image": "adidasn4.png",
+        "Brand":"Nike",
+        "Model": "Garcia",
+        "Date": "2020-08-08",
+        "BuyLink": "https://stockx.com/nike-manoa-haystack"
+    },
+    {
+        "Id":6,
+        "Name":"Nike Garcia",
+        "Type":"Red",
+        "Price":"$690",
+        "Brand":"Nike",
+        "Model": "Garcia",
+        "Date": "2020-01-07",
+        "BuyLink": "https://stockx.com/nike-manoa-haystack"
+    }
+  ]

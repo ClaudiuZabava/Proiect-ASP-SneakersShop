@@ -1,0 +1,13 @@
+<div class="row shadow mb-4">
+    <div class="col-sm-12 p-0">
+        <div class="card">
+            <h1 style="padding:10px;">Discussions <span style="color: red"><i class="fas fa-bullhorn"></i></span></h1>
+            <button (click)="goType()" type="button" class="btn btn-dark" style="margin-top:2%;"><h5><i class="far fa-comments"></i> Add new Comment</h5></button>
+        </div>
+    </div>
+</div>
+
+
+<div *ngFor="let comment of Comments">
+    <app-comment-card [comment]="comment"></app-comment-card>
+</div>

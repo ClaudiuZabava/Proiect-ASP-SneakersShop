@@ -1,0 +1,79 @@
+<div class="row shadow mb-4">
+    <div class="col-sm-4 p-0">
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img *ngIf="product.Image" class="card-img-top" src="assets/images/{{product.Image}}">
+                <img *ngIf="!product.Image" class="card-img-top" src="assets/images/snk_default.png">
+
+            </div>
+            <div class="card-body">
+                <h1 class="card-title">{{product.Name}}</h1>
+                <div>
+                    <strong>Color: {{product.Type}}</strong>
+                </div>
+                <div>
+                    <strong>Price: {{product.Price}}</strong>
+                </div>
+
+            </div>
+            <div class="card-footer">
+                <div class="btn-group d-flex">
+                    <button (click)="goToBuy()" type="button" class="btn btn-dark">Buy <i class="fas fa-shopping-basket"></i></button>
+                    <button type="button" class="btn btn-dark" style="margin-left:2%;">Save <i class="fas fa-heart"></i></button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8 p-0">
+        <div class="tab-panel">
+            <tabset class="member-tabset">
+                <tab heading="Details">
+                    <div class="row">
+                        <div class="col" style="margin-left:3%;">
+                            <br />
+                            <div class="heading">
+                                <strong><h3>Brand:</h3></strong>
+                                <strong>{{product.Brand}}</strong>
+                            </div>
+                        
+
+                            <br />
+                            <div class="heading">
+                                <strong><h3>Model:</h3></strong>
+                                <strong>{{product.Model}}</strong>
+                            </div>
+                        
+
+                            <br />
+                            <div class="heading">
+                                <strong><h3>Release Date:</h3></strong>
+                                <strong>{{product.Date | slice:0:10}}</strong>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </tab>
+            </tabset>
+        </div>
+
+    </div>
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
