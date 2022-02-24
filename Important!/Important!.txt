@@ -3,10 +3,8 @@
 -> Proiectul contine doar front-end
 
 Pentru a facilita corectarea si verificarea cerintelor, 
-am cread fisierul README.pdf in care am aratat 
-unde in proiect si cum s-a rezolvat fiecare cerinta.
-
-Am prezentat de asemenea si functionalitatile si modul de utilizare al aplicatiei, pentru a intelege mai bine.
+am creat fisierul README.pdf in care am prezentat pas cu pas functionalitatile 
+si modul de utilizare al aplicatiei, pentru a intelege mai bine.
 
 
 
