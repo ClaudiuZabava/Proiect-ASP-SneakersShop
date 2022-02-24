@@ -8,4 +8,4 @@
 - SCSS: 6.0%
 - JavaScript: 1.9%
 
-*This project is just the Front-End implementation. 
+*This project is just the Front-End implementation. *
